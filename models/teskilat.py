@@ -14,7 +14,7 @@ class Sube(models.Model):
 
 
     name = fields.Char(string="Sube İsim", store=True, readonly=False, tracking=True)
-    user_id = fields.Many2one('res.users', 'User', related='resource_id.user_id', store=True, readonly=False)
+    
     user_id = fields.Many2one('res.users', 'User', store=True, readonly=False)
     state_id = fields.Many2one("res.country.state", string='State', ondelete='restrict',
                                domain="[('country_id', '=?', country_id)]")
