@@ -14,7 +14,7 @@ class Sube(models.Model):
 
 
     name = fields.Char(string="Sube İsim", store=True, readonly=False, tracking=True)
-    # user_id = fields.Many2one('res.users', 'User', related='resource_id.user_id', store=True, readonly=False)
+    user_id = fields.Many2one('res.users', 'User', related='resource_id.user_id', store=True, readonly=False)
     user_id = fields.Many2one('res.users', 'User', store=True, readonly=False)
     state_id = fields.Many2one("res.country.state", string='State', ondelete='restrict',
                                domain="[('country_id', '=?', country_id)]")
@@ -30,7 +30,7 @@ class karavanv1ilce(models.Model):
     _order = 'name'
 
     name = fields.Char(string="ilce İsim", store=True, readonly=False, tracking=True)
-    # user_id = fields.Many2one('res.users', 'User', related='resource_id.user_id', store=True, readonly=False)
+    user_id = fields.Many2one('res.users', 'User', related='resource_id.user_id', store=True, readonly=False)
     user_id = fields.Many2one('res.users', 'User', store=True, readonly=False,
                               )
     sube_id = fields.Many2one('karavan.sube', 'Sube', store=True, readonly=False)
@@ -43,7 +43,7 @@ class karavanokul(models.Model):
     _order = 'name'
 
     name = fields.Char(string="Okul İsim", store=True, readonly=False, tracking=True)
-    # user_id = fields.Many2one('res.users', 'User', related='resource_id.user_id', store=True, readonly=False)
+    user_id = fields.Many2one('res.users', 'User', related='resource_id.user_id', store=True, readonly=False)
 
     ilce_id = fields.Many2one('karavan.ilce', 'İlçe', store=True, readonly=False)
     # sube_id = fields.Many2one("karavan.sube", string='Şube', store=True, ondelete='restrict',
