@@ -45,7 +45,7 @@
                 <search>
                     <field name="name"/>
 <!--                     <field name="user_id"/> -->
-<!--
+
 <!--                     <filter string="my s" name="my_invoicesds" domain="[('user_id', '=', 'konyaagd')]"/> -->
                     <group expand="0" string="Group By">
                         <filter name="group_manager" string="Manager" domain="[]" context="{'group_by':'state_id'}"/>
