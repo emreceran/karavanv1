@@ -1,0 +1,14 @@
+<odoo>
+
+
+  <menuitem sequence="0" id="menu_karavan" name="Karavan"/>
+  <menuitem id="menu_karavan_teskilat" parent="menu_karavan" name="Teşkilat"/>
+  <menuitem id="menu_karavan_takimlar" parent="menu_karavan" name="Takımlar"/>
+<!--  <menuitem id="menu_karavan_content_subeler"-->
+<!--            parent="menu_karavan_content"-->
+<!--            action="action_karavan_sube"/>-->
+<!--  <menuitem id="menu_karavan_content_ilceler"-->
+<!--            parent="menu_karavan_content"-->
+<!--            action="action_karavan_ilceler"/>-->
+</odoo>
+

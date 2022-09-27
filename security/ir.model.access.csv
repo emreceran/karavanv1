@@ -1,0 +1,14 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+
+access_karavan_sube_sube,karavan.sube,model_karavan_sube,karavan.sube_group_user,1,0,0,0
+access_karavan_sube_ilce,karavan.sube,model_karavan_sube,karavan.ilce_group_user,0,0,0,0
+
+
+access_karavan_ilce_ilce,karavan.ilce,model_karavan_ilce,karavan.ilce_group_user,1,0,0,0
+access_karavan_ilce_sube,karavan.ilce,model_karavan_ilce,karavan.sube_group_user,1,1,1,1
+
+
+access_karavan_okul_sube, access_karavan_okul_sube,model_karavan_okul,karavan.sube_group_user,1,1,1,1
+access_karavan_okul_ilce, access_karavan_okul_ilce,model_karavan_okul,karavan.ilce_group_user,1,1,1,1
+access_karavan_okul_kaptan, access_karavan_okul_kaptan,model_karavan_okul,karavan.ilce_group_user,1,1,1,1

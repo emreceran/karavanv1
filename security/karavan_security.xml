@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data noupdate="0">
+
+
+
+    <record id="estate_group_user" model="res.groups">
+        <field name="name">Agent</field>
+        <field name="category_id" ref="base.module_category_karavan"/>
+        <field name="users" eval="[(4, ref('base.user_root'))]"/>
+    </record>
+
+    <record id="sube_group_user" model="res.groups">
+        <field name="name">Sube</field>
+        <field name="category_id" ref="base.module_category_karavan"/>
+<!--        <field name="users" eval="[(4, ref('base.user_root'))]"/>-->
+    </record>
+
+    <record id="ilce_group_user" model="res.groups">
+        <field name="name">ilce</field>
+        <field name="category_id" ref="base.module_category_karavan"/>
+<!--        <field name="users" eval="[(4, ref('base.user_root'))]"/>-->
+    </record>
+
+    <record id="kaptan_group_user" model="res.groups">
+        <field name="name">kaptan</field>
+        <field name="category_id" ref="base.module_category_karavan"/>
+<!--        <field name="users" eval="[(4, ref('base.user_root'))]"/>-->
+    </record>
+
+    <record model="ir.rule" id="karavan_ilce_rule">
+        <field name="name">karavan ilceleri görebilir</field>
+        <field name="model_id" ref="model_karavan_ilce"/>
+        <field name="domain_force"> [ ('sube_id.user_id', '=', user.id)]</field>
+<!--        <field name="users" eval="[(4, ref('karavan.sube_group_user'))]"/>-->
+    </record>
+
+    <record model="ir.rule" id="karavan_okul_sube_rule">
+        <field name="name">Şubeler kendi okullarını görebilir</field>
+        <field name="model_id" ref="model_karavan_okul"/>
+        <field name="domain_force"> ['|', ('ilce_id.sube_id.user_id', '=', user.id),('ilce_id.user_id', '=', user.id)]</field>
+    </record>
+
+<!--    <record id="group_sale_pricelist" model="res.groups">-->
+<!--        <field name="name">Advanced Pricelists</field>-->
+<!--        <field name="category_id" ref="base.module_category_hidden"/>-->
+<!--        <field name="implied_ids" eval="[(4, ref('product.group_product_pricelist'))]"/>-->
+<!--    </record>-->
+
+<!--    <record id="group_stock_packaging" model="res.groups">-->
+<!--        <field name="name">Manage Product Packaging</field>-->
+<!--        <field name="category_id" ref="base.module_category_hidden"/>-->
+<!--    </record>-->
+
+<!--    <record id="group_product_variant" model="res.groups">-->
+<!--        <field name="name">Manage Product Variants</field>-->
+<!--        <field name="category_id" ref="base.module_category_hidden"/>-->
+<!--    </record>-->
+
+<!--    <record id="group_discount_per_so_line" model="res.groups">-->
+<!--        <field name="name">Discount on lines</field>-->
+<!--        <field name="category_id" ref="base.module_category_hidden"/>-->
+<!--    </record>-->
+
+<!--</data>-->
+<!--<data noupdate="1">-->
+
+<!--    <record id="product_comp_rule" model="ir.rule">-->
+<!--        <field name="name" >Product multi-company</field>-->
+<!--        <field name="model_id" ref="model_product_template"/>-->
+<!--        <field name="domain_force"> ['|', ('company_id', 'in', company_ids), ('company_id', '=', False)]</field>-->
+<!--    </record>-->
+
+<!--    <record model="ir.rule" id="product_pricelist_comp_rule">-->
+<!--        <field name="name">product pricelist company rule</field>-->
+<!--        <field name="model_id" ref="model_product_pricelist"/>-->
+<!--        <field name="domain_force"> ['|', ('company_id', 'in', company_ids), ('company_id', '=', False)]</field>-->
+<!--    </record>-->
+
+<!--    <record model="ir.rule" id="product_pricelist_item_comp_rule">-->
+<!--        <field name="name">product pricelist item company rule</field>-->
+<!--        <field name="model_id" ref="model_product_pricelist_item"/>-->
+<!--        <field name="domain_force"> ['|', ('company_id', 'in', company_ids), ('company_id', '=', False)]</field>-->
+<!--    </record>-->
+
+<!--    <record model="ir.rule" id="product_supplierinfo_comp_rule">-->
+<!--        <field name="name">product supplierinfo company rule</field>-->
+<!--        <field name="model_id" ref="model_product_supplierinfo"/>-->
+<!--        <field name="domain_force">['|', ('company_id', '=', False), ('company_id', 'in', company_ids)]</field>-->
+<!--    </record>-->
+
+<!--    <record model="ir.rule" id="product_packaging_comp_rule">-->
+<!--        <field name="name">product packaging company rule</field>-->
+<!--        <field name="model_id" ref="model_product_packaging"/>-->
+<!--        <field name="domain_force">['|', ('company_id', '=', False), ('company_id', 'in', company_ids)]</field>-->
+<!--    </record>-->
+
+</data>
+</odoo>

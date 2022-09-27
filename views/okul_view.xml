@@ -1,0 +1,88 @@
+<odoo>
+    <data>
+        <!-- explicit list view definition -->
+
+        <record id="karavan_okul_form" model="ir.ui.view">
+            <field name="name">karavan.okul.form</field>
+            <field name="model">karavan.okul</field>
+            <field name="arch" type="xml">
+                <form string="Okul" edit="0">
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="ilce_id"/>
+
+
+
+
+                        </group>
+
+                    </group>
+
+
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="karavan_okul_tree">
+            <field name="name">karavan.okul.tree</field>
+            <field name="model">karavan.okul</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+
+                    <field name="ilce_id"/>
+<!--                    <field name="sube_id"/>-->
+
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="karavan_okul_search">
+            <field name="name">karavan.okul.search</field>
+            <field name="model">karavan.okul</field>
+            <field name="arch" type="xml">
+                <search>
+                    <filter name="name"/>
+                    <group expand="0" string="Group By">
+<!--                        <filter string="Şube" name="sube" context="{'group_by':'sube_id'}"/>-->
+                        <filter string="İlçe" name="ilce"  context="{'group_by':'ilce_id'}"/>
+                    </group>
+
+<!--
+                    <filter string="my s" name="my_invoicesds" domain="[('user_id', '=', 'konyaagd')]"/>
+                    <group expand="0" string="Group By">
+                        <filter name="group_manager" string="Manager" domain="[]" context="{'group_by':'state_id'}"/>
+
+                    </group>
+                    <searchpanel>
+                        <field name="state_id" string="Şubeler" select="multi" groups="base.group_user" icon="fa-building" enable_counters="1"/>
+
+                    </searchpanel>
+                    -->
+                </search>
+            </field>
+        </record>
+
+
+
+        <!-- actions opening views on models -->
+
+        <record model="ir.actions.act_window" id="karavan_okul_action_window">
+            <field name="name">Okullar</field>
+            <field name="res_model">karavan.okul</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+
+
+
+
+
+        <menuitem name="Okul" id="karavan.menu_3_list" parent="menu_karavan_teskilat"
+                  action="karavan_okul_action_window"/>
+
+
+    </data>
+</odoo>
