@@ -2,5 +2,5 @@
 
 from . import models
 from . import teskilat
-from . import res_users
+
 
