@@ -24,21 +24,21 @@
 
     # always loaded
     'data': [
-        'security/karavan_security.xml',
-        'security/ir.model.access.csv',
+#         'security/karavan_security.xml',
+#         'security/ir.model.access.csv',
 
 
-        'views/views.xml',
-        'views/sube_view.xml',
-        'views/ilce_view.xml',
-#         'views/okul_view.xml',
-#         'views/takim_view.xml',
-        'views/res_users_views.xml',
-        'views/templates.xml',
-        'views/signup_extra.xml',
+#         'views/views.xml',
+#         'views/sube_view.xml',
+#         'views/ilce_view.xml',
+# #         'views/okul_view.xml',
+# #         'views/takim_view.xml',
+#         'views/res_users_views.xml',
+#         'views/templates.xml',
+#         'views/signup_extra.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
-        'demo/demo.xml',
+#         'demo/demo.xml',
     ],
 }
