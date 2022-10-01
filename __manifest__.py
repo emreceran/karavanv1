@@ -33,7 +33,7 @@
         'views/ilce_view.xml',
         'views/okul_view.xml',
 # #         'views/takim_view.xml',
-#         'views/res_users_views.xml',
+        'views/res_users_views.xml',
 #         'views/templates.xml',
 #         'views/signup_extra.xml',
     ],
