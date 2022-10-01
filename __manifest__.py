@@ -35,7 +35,7 @@
 # #         'views/takim_view.xml',
         'views/res_users_views.xml',
 #         'views/templates.xml',
-#         'views/signup_extra.xml',
+        'views/signup_extra.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
