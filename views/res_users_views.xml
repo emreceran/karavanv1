@@ -45,6 +45,18 @@
                         </t>
                     </select>
                 </div>
+                
+                  <div t-attf-class="form-group #{error.get('okul_id') and 'o_has_error' or ''} col-xl-6">
+                    <label class="col-form-label label-optional" for="okul_id"> Okul </label>
+                    <select name="okul_id" t-attf-class="form-control #{error.get('okul_id') and 'is-invalid' or ''}">
+                        <option value="">select...</option>
+                        <t t-foreach="okullar or []" t-as="okul">
+                            <option t-att-value="okul.id"   t-att-data-okul_id="sube.okul_id.id" >
+                                <t t-esc="okul.name" />
+                            </option>
+                        </t>
+                    </select>
+                </div>
 
 
                 <input type="hidden" name="redirect" t-att-value="redirect"/>
