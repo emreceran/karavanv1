@@ -41,7 +41,7 @@ class karavanokul(models.Model):
     _order = 'name'
 
     name = fields.Char(string="Okul İsim", store=True, readonly=False, tracking=True)
-    user_id = fields.Many2one('res.users', 'User', related='resource_id.user_id', store=True, readonly=False)
+    user_id = fields.Many2one('res.users', 'User', store=True, readonly=False,)
 
     ilce_id = fields.Many2one('karavan.ilce', 'İlçe', store=True, readonly=False)
     sube_id = fields.Many2one("karavan.sube", string='Şube', store=True, ondelete='restrict',
@@ -64,7 +64,7 @@ class karavantakim(models.Model):
     ilce_id = fields.Many2one("karavan.ilce", string='İlçe', ondelete='restrict',
                               related="okul_id.ilce_id")
 
-    user_id = fields.Many2one('res.users', string='Kaptan')
+    user_id = fields.Many2one('res.users', 'KAptan', store=True, readonly=False,)
 
     member_ids = fields.Many2many(
         'res.users', string='Takım Üyeleri',
