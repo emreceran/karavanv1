@@ -76,7 +76,7 @@
 
 
 
-        <menuitem name="Şube" id="karavan.menu_sube_list" parent="menu_karavan_teskilat"
+        <menuitem name="Şube" id="karavan_menu_sube_list" parent="menu_karavan_teskilat"
                   sequence="0"  action="karavan_sube_action_window"/>
 
 
