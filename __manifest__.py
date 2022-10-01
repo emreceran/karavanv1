@@ -28,8 +28,8 @@
         'security/ir.model.access.csv',
 
 
-#         'views/views.xml',
-#         'views/sube_view.xml',
+        'views/views.xml',
+        'views/sube_view.xml',
 #         'views/ilce_view.xml',
 # #         'views/okul_view.xml',
 # #         'views/takim_view.xml',
