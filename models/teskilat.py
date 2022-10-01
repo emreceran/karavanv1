@@ -45,7 +45,7 @@ class karavanokul(models.Model):
 
     ilce_id = fields.Many2one('karavan.ilce', 'İlçe', store=True, readonly=False)
     sube_id = fields.Many2one("karavan.sube", string='Şube', store=True, ondelete='restrict',
-    #                           related="ilce_id.sube_id")
+                   related="ilce_id.sube_id")
 
 class karavantakim(models.Model):
     _name = "karavan.takim"
