@@ -80,7 +80,7 @@
 
 
 
-        <menuitem name="Okul" id="karavan.menu_3_list" parent="menu_karavan_teskilat"
+        <menuitem name="Okul" id="karavan_okul_menu_list" parent="menu_karavan_teskilat"
                   action="karavan_okul_action_window"/>
 
 
