@@ -51,7 +51,7 @@
                     <select name="okul_id" t-attf-class="form-control #{error.get('okul_id') and 'is-invalid' or ''}">
                         <option value="">select...</option>
                         <t t-foreach="okullar or []" t-as="okul">
-                            <option t-att-value="okul.id"   t-att-data-okul_id="okul.ilce_id.id" >
+                            <option t-att-value="okul.id"   t-att-data-ilce_id="okul.ilce_id.id" >
                                 <t t-esc="okul.name" />
                             </option>
                         </t>
