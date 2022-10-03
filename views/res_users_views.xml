@@ -21,7 +21,14 @@
                 <attribute name="style">display:none</attribute>
             </xpath>
             
+            <xpath expr="//label[@for='zipcode']/parent::div" position="attributes">
+                <attribute name="style">display:none</attribute>
+            </xpath>
+            
             <xpath expr="//label[@for='country_id']/parent::div" position="attributes">
+                <attribute name="style">display:none</attribute>
+            </xpath>
+            <xpath expr="//label[@for='state_id']/parent::div" position="attributes">
                 <attribute name="style">display:none</attribute>
             </xpath>
 
